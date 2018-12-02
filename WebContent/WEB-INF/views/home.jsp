@@ -10,10 +10,10 @@
 <h1>Welcome</h1><br>
 
 
-<br><a href="createStudent">createStudent</a>
-<br><a href="getStudent">getStudent</a>
-<br><a href="deleteStudent">deleteStudent</a>
-<br><a href="updatestudent">updateStudent</a>
+<br><a href="new">Create Student</a>
+<br><a href="get">Get Student</a>
+<br><a href="delete">Delete Student</a>
+<br><a href="edit">Edit Student</a>
 
 </body>
 </html>

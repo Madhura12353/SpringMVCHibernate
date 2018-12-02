@@ -10,7 +10,7 @@
 <body>
 Creating student!!!
 </body>
-<form:form id="loginForm" modelAttribute="mylogin" action="loginProcess" method="post">
+<form:form id="loginForm" modelAttribute="mylogin" action="login-form" method="post">
                 <table align="center">
                     <tr>
                         <td>
