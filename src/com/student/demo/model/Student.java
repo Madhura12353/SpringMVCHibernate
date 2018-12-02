@@ -1,17 +1,19 @@
 package com.student.demo.model;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 
 
-@javax.persistence.Entity
+@Entity
 public class Student {
-	String username;
-	String password;
-	String firstname;
-	String lastname;
-	String email;
-	String address;
-	String phone;
+	private String username;
+	private String password;
+	private String firstname;
+	private String lastname;
+	private String email;
+	private String address;
+	private String phone;
+	
 	@Id
 	public
 	int id;
