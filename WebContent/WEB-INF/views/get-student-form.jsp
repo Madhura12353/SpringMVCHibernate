@@ -1,26 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title><spring:message code="lbl.title" /></title>
+<style>
+.error {
+	color: red
+}
+</style>
 </head>
 <body>
-Get student jsp page
-<form:form id="regForm" modelAttribute="student"  action="getStudent" method="get">
-<table align="center">
+	<form:form modelAttribute="student" action="getStudent" method="get">
+		<table>
+
 			<tr>
-				<td><form:label path="id">Enter ID:</form:label></td>
-				<td><form:input path="id" name="id" id="id" />
-				</td>
+				<td><spring:message code="lbl.studentId" />:</td>
+				<td><form:input path="id" size="30" /> <form:errors path="id"
+						cssClass="error" /> <b><font color="red">${message}</font></b></td>
 			</tr>
-			<td></td>
-				<td><form:button id="submit" name="submit">submit</form:button>
-				</td>
+
+			<tr>
+				<td colspan="2" align="center"><input type="submit"
+					value="Get Student" name="btnSubmit" /></td>
 			</tr>
-			<tr></tr>
 			<tr>
 				<td></td>
 				<td><a href="home">Home</a></td>

@@ -3,8 +3,8 @@ package com.student.demo.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.student.demo.model.Student;
-import com.student.demo.model.User;
+import com.student.demo.model.bo.StudentBO;
+import com.student.demo.model.bo.User;
 import com.student.demo.repository.StudentHibernateRepository;
 
 
@@ -24,19 +24,19 @@ public class StudentService {
 	}
 	
 
-	public int createStudent(Student student) {
+	public int createStudent(StudentBO studentBO) {
 		id++;
-		student.setId(id);
+		studentBO.setId(id);
 
-		studentRepo.insertindatabase(student);
+		studentRepo.insertindatabase(studentBO);
 		return id;
 
 	}
 
-	public Student getStudent(int id) {
+	public StudentBO getStudent(int id) {
 
-		Student student = studentRepo.selectfromdatabase(id);
-		return student;
+		StudentBO studentBO = studentRepo.selectfromdatabase(id);
+		return studentBO;
 
 	}
 

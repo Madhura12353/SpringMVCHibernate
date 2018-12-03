@@ -13,59 +13,114 @@
 }
 </style>
 </head>
+
 <body>
+	<div class="container">
+		<%@ include file="header.jsp"%>
+		<%@ include file="navbar.jsp"%>
+		
+		<div class="login-form">
+			<div class="main-div">
+				<div class="panel">
+					<p>Please fill following registration form</p>
+				</div>
+
+
+				<form:form modelAttribute="student" action="saveStudent"
+					method="post">
+					<table class="table table-hover">
+						<tr class="form-group">
+							<td><spring:message code="lbl.firstName" />:</td>
+							<td><form:input path="firstname" size="30" /> <form:errors
+									path="firstname" cssClass="error" /> <b><font color="red">${message}</font></b>
+							</td>
+						</tr>
+
+						<tr class="form-group">
+							<td><spring:message code="lbl.lastName" />:</td>
+							<td><form:input path="lastname" size="30" /> <form:errors
+									path="lastname" cssClass="error" /> <b><font color="red">${message}</font></b>
+							</td>
+						</tr>
+
+						<tr class="form-group">
+							<td><spring:message code="lbl.email" />:</td>
+							<td><form:input path="email" size="30" /> <form:errors
+									path="email" cssClass="error" /> <b><font color="red">${message}</font></b>
+							</td>
+						</tr>
+
+						<tr class="form-group">
+							<td><spring:message code="lbl.address" />:</td>
+							<td><form:input path="address" size="30" /> <form:errors
+									path="address" cssClass="error" /> <b><font color="red">${message}</font></b>
+							</td>
+						</tr>
+
+						<tr class="form-group">
+							<td><spring:message code="lbl.phone" />:</td>
+							<td><form:input path="phone" size="30" /> <form:errors
+									path="phone" cssClass="error" /> <b><font color="red">${message}</font></b>
+							</td>
+						</tr>
+
+						<tr>
+							<td></td>
+							<td>
+								<button type="submit" class="btn btn-primary">Save
+									Account</button>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><a href="home">Home</a></td>
+						</tr>
+					</table>
+				</form:form>
+			</div>
+		</div>
+		<%@ include file="footer.jsp"%>
+	</div>
+</body>
+<%-- <body>
 	<h2>Please Fill Up The Form Details</h2>
 	<form:form modelAttribute="student" action="saveStudent" method="post">
 		<table>
-			<tr>
-				<td><spring:message code="lbl.username" />:</td>
-				<td><form:input path="username" size="30" /> <form:errors
-						path="username" cssClass="error" /> <b><font color="red">${message}</font></b>
-				</td>
-			</tr>
-			
-			<tr>
-				<td><spring:message code="lbl.password" />:</td>
-				<td><form:input path="password" size="30" /> <form:errors
-						path="password" cssClass="error" /> <b><font color="red">${message}</font></b>
-				</td>
-			</tr>
-			
 			<tr>
 				<td><spring:message code="lbl.firstName" />:</td>
 				<td><form:input path="firstname" size="30" /> <form:errors
 						path="firstname" cssClass="error" /> <b><font color="red">${message}</font></b>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td><spring:message code="lbl.lastName" />:</td>
 				<td><form:input path="lastname" size="30" /> <form:errors
 						path="lastname" cssClass="error" /> <b><font color="red">${message}</font></b>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td><spring:message code="lbl.email" />:</td>
 				<td><form:input path="email" size="30" /> <form:errors
 						path="email" cssClass="error" /> <b><font color="red">${message}</font></b>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td><spring:message code="lbl.address" />:</td>
 				<td><form:input path="address" size="30" /> <form:errors
 						path="address" cssClass="error" /> <b><font color="red">${message}</font></b>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td><spring:message code="lbl.phone" />:</td>
 				<td><form:input path="phone" size="30" /> <form:errors
 						path="phone" cssClass="error" /> <b><font color="red">${message}</font></b>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td colspan="2" align="center"><input type="submit"
 					value="Save Account" name="btnSubmit" /></td>
@@ -76,5 +131,5 @@
 			</tr>
 		</table>
 	</form:form>
-</body>
+</body> --%>
 </html>

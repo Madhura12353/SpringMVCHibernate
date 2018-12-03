@@ -1,2 +1,3 @@
 .springBeans
+target/
 target/SpringMvcHibernate-0.0.1-SNAPSHOT/WEB-INF/views/

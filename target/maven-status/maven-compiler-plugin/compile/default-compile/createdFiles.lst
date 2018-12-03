@@ -1,7 +1,10 @@
-com/student/demo/model/Student.class
+com/student/demo/model/bo/Login.class
+com/student/demo/validator/LoginValidator.class
 com/student/demo/service/StudentService.class
+com/student/demo/aop/StudentRegistrationAspect.class
 com/student/demo/controller/StudentController.class
-com/student/demo/model/User.class
+com/student/demo/model/bo/User.class
 com/student/demo/repository/StudentHibernateRepository.class
-com/student/demo/model/Login.class
+com/student/demo/model/bo/StudentBO.class
+com/student/demo/model/dao/StudentDAO.class
 com/student/demo/repository/DatabaseConnectivity.class

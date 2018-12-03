@@ -7,8 +7,7 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.service.ServiceRegistryBuilder;
 import org.springframework.stereotype.Component;
 
-
-import com.student.demo.model.Student;
+import com.student.demo.model.dao.StudentDAO;
 
 
 
@@ -18,7 +17,7 @@ public class DatabaseConnectivity {
 	private Session session;
 	public DatabaseConnectivity() {
 		
-		Configuration con = new Configuration().configure().addAnnotatedClass(Student.class);
+		Configuration con = new Configuration().configure().addAnnotatedClass(StudentDAO.class);
 		
 		ServiceRegistry reg = new ServiceRegistryBuilder().applySettings(con.getProperties()).buildServiceRegistry();
 		
